@@ -51,6 +51,9 @@ build/Release
 
 build/
 dist/
+layers/
+old_data/
+res/
 node_modules/
 jspm_packages/
 

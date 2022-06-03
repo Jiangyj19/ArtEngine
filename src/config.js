@@ -5,9 +5,9 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Your Collection";
-const description = "Remember to replace this description";
-const baseUri = "ipfs://NewUriToReplace";
+const namePrefix = "ImTired";
+const description = "This is ImTired NFT PROJECT.";
+const baseUri = "http://47.88.14.148/hyperdog/images";
 
 const solanaMetadata = {
   symbol: "YC",
@@ -22,28 +22,43 @@ const solanaMetadata = {
 };
 
 // If you have selected Solana then the collection starts from 0 automatically
-const layerConfigurations = [
+const layerConfigurations = [//可设置多种图层组和模式
   {
     growEditionSizeTo: 5,
     layersOrder: [
       { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "Body" },
+      { name: "Head" },
+      { name: "Text" },
+      // { name: "Eye" },
+      // { name: "Face" },
+      // { name: "Hat" },
+      // { name: "Mouse" },
+      // { name: "Head" },
     ],
   },
+  // {
+  //   growEditionSizeTo: 10,
+  //   layersOrder: [
+  //     { name: "BgColor" },
+  //     { name: "Clothes" },
+  //     { name: "Decorate" },
+  //     { name: "Eye" },
+  //     { name: "Face" },
+  //     { name: "Hat" },
+  //     { name: "Mouse" },
+  //     { name: "Head" },
+  //   ],
+  // },
 ];
 
-const shuffleLayerConfigurations = false;
+const shuffleLayerConfigurations = false;//按照随机的index生成图片
 
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 582,
+  height: 582,
   smoothing: false,
 };
 
@@ -56,7 +71,7 @@ const gif = {
 
 const text = {
   only: false,
-  color: "#ffffff",
+  color: "#black",
   size: 20,
   xGap: 40,
   yGap: 40,
@@ -72,7 +87,7 @@ const pixelFormat = {
 };
 
 const background = {
-  generate: true,
+  generate: false,
   brightness: "80%",
   static: false,
   default: "#000000",
